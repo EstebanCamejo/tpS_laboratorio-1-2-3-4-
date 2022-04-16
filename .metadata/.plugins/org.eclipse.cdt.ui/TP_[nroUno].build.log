@@ -1,62 +1,11 @@
-11:01:21 **** Incremental Build of configuration Debug for project TP_[nroUno] ****
+20:49:01 **** Incremental Build of configuration Debug for project TP_[nroUno] ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn_getNumero.o" "..\\src\\utn_getNumero.c" 
-..\src\utn_getNumero.c: In function 'utnTP1calculo':
-..\src\utn_getNumero.c:30:45: warning: left-hand operand of comma expression has no effect [-Wunused-value]
-   30 |     if (pResultado != NULL && operador1 >= 0, operador2 >= 0 , operador3 > 0 )
-      |                                             ^
-..\src\utn_getNumero.c:30:62: warning: left-hand operand of comma expression has no effect [-Wunused-value]
-   30 |     if (pResultado != NULL && operador1 >= 0, operador2 >= 0 , operador3 > 0 )
-      |                                                              ^
-..\src\utn_getNumero.c:46:18: warning: implicit declaration of function 'pintf'; did you mean 'printf'? [-Wimplicit-function-declaration]
-   46 |      resultado = pintf(
-      |                  ^~~~~
-      |                  printf
-..\src\utn_getNumero.c:24:11: warning: variable 'btcOP1' set but not used [-Wunused-but-set-variable]
-   24 |     float btcOP1;// c) Bitcoin (1BTC -> 4606954.55 Pesos Argentinos)
-      |           ^~~~~~
-..\src\utn_getNumero.c:19:11: warning: variable 'btcOP2' set but not used [-Wunused-but-set-variable]
-   19 |     float btcOP2;// c) Bitcoin (1BTC -> 4606954.55 Pesos Argentinos)
-      |           ^~~~~~
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[nroUno].o" "..\\src\\TP_[nroUno].c" 
 ..\src\TP_[nroUno].c: In function 'main':
-..\src\TP_[nroUno].c:45:12: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'float *' [-Wformat=]
-   45 |    scanf("%d", &kmIngresados);
-      |           ~^   ~~~~~~~~~~~~~
-      |            |   |
-      |            |   float *
-      |            int *
-      |           %e
-..\src\TP_[nroUno].c:51:12: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'float *' [-Wformat=]
-   51 |    scanf("%d", &latamPrecioTotalVuelo);
-      |           ~^   ~~~~~~~~~~~~~~~~~~~~~~
-      |            |   |
-      |            |   float *
-      |            int *
-      |           %e
-..\src\TP_[nroUno].c:55:12: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'float *' [-Wformat=]
-   55 |    scanf("%d", &aerolineasPrecioTotalVuelo);
-      |           ~^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      |            |   |
-      |            |   float *
-      |            int *
-      |           %e
-..\src\TP_[nroUno].c:68:13: warning: passing argument 1 of 'printf' makes pointer from integer without a cast [-Wint-conversion]
-   68 |      printf(resultado);
-      |             ^~~~~~~~~
-      |             |
-      |             char
-In file included from ..\src\TP_[nroUno].c:11:
-c:\mingw\include\stdio.h:462:46: note: expected 'const char *' but argument is of type 'char'
-  462 | _CRTIMP __cdecl __MINGW_NOTHROW  int printf (const char *, ...);
-      |                                              ^~~~~~~~~~~~
-..\src\TP_[nroUno].c:41:2: warning: 'opcion' is used uninitialized in this function [-Wuninitialized]
-   41 |  switch (opcion){
-      |  ^~~~~~
+..\src\TP_[nroUno].c:33:6: warning: variable 'tarjetaCreditoAerolineas' set but not used [-Wunused-but-set-variable]
+   33 |  int tarjetaCreditoAerolineas;// 3 AREOLINEAS
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~
 gcc -o TP_[nroUno].exe "src\\TP_[nroUno].o" "src\\utn_getNumero.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\utn_getNumero.o: in function `utnTP1calculo':
-D:\eclipse-workspaceTPs\TP_[nroUno]\Debug/../src/utn_getNumero.c:46: undefined reference to `pintf'
-collect2.exe: error: ld returned 1 exit status
 
-11:01:23 Build Failed. 2 errors, 10 warnings. (took 1s.935ms)
+20:49:02 Build Finished. 0 errors, 1 warnings. (took 365ms)
 

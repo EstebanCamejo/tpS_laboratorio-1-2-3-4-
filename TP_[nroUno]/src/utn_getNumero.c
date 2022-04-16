@@ -8,63 +8,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int utnTP1calculo (char* pResultado, float operador1, float operador2, float operador3)
-			{
-
-				char resultado;
-				int retorno = -1;
-
-				float tarjetaDebitoOP2;// a) Tarjeta de débito (descuento 10%)
-				float tarjetaCreditoOP2;// b) Tarjeta de crédito (interés 25%)
-				float btcOP2;// c) Bitcoin (1BTC -> 4606954.55 Pesos Argentinos)
-				float precioKmOP2;
-
-				float tarjetaDebitoOP1;// a) Tarjeta de débito (descuento 10%)
-				float tarjetaCreditoOP1;// b) Tarjeta de crédito (interés 25%)
-				float btcOP1;// c) Bitcoin (1BTC -> 4606954.55 Pesos Argentinos)
-				float precioKmOP1;// d) Mostrar precio por km (precio unitario)
-
-				float diffAerolineas;// e) Mostrar diferencia de precio ingresada (Latam - Aerolíneas)
-
-											// latam     Aerolines       KMs
-				if (pResultado != NULL && operador1 >= 0, operador2 >= 0 , operador3 > 0 )
-				{	// Aerolineas
-					tarjetaDebitoOP1 = operador1 * 0.9;
-					tarjetaCreditoOP1 = operador1 * 1.25;
-					btcOP1 = operador1/4606954.55;
-					precioKmOP1 = operador1/ operador3;
-					// Latam
-					tarjetaDebitoOP2 = operador2 * 0.9;
-					tarjetaCreditoOP2 = operador2 * 1.25;
-					btcOP2 = operador2/4606954.55;
-					precioKmOP2 = operador2/ operador3;
-					 if (operador1 > operador2){
-						 diffAerolineas = operador1 - operador2;					 }
-					 else {
-						 diffAerolineas = operador2 - operador1;
-					 }
-					resultado = pintf(
-								 "KMs Ingresados: %f KM \n\nPrecio Aerolineas: $ %f\n a) Precio con tarjeta de debito: $ %f \n b) Precio con tarjeta de credito: $ %f \n c) Precio pagado con bitcoin: %f BTC \n d) Mostrar precio unitario : $ %f \n\nPrecio Latam: $ %f \n a) Precio con tarjeta de debito: $ %f \n b) Precio con tarjeta de credito: $ %f \n c) Precio pagado con bitcoin: %f BTC \n d) Mostrar precio unitario : $ %f \n\nLa diferencia de precios es: $ %f",
-								 operador3, operador2,tarjetaDebitoOP2,tarjetaCreditoOP2,precioKmOP2,operador1,tarjetaDebitoOP1,tarjetaCreditoOP1,precioKmOP1,diffAerolineas
-						 	 	 );
-					*pResultado = resultado;
-					retorno = 0;
-				} // final del IF
-
-				return retorno;
-			} // final de la fx
-
-
-
-
 int utn_getNumero(int* pResultado, char* mensaje, char* mensajeError, int minimo, int maximo, int reintentos)
 {
-	int retorno = -1;
 	int bufferInt;
+	int retorno = -1;
 	if(pResultado != NULL && mensaje != NULL && mensajeError != NULL && minimo <= maximo && reintentos >= 0) //validacion de parametros
 	{
 		do{
-			printf("%s", mensaje);// cualquier tipo de string en el msj
+			printf("%s", mensaje); // cualquier tipo de string en el msj
 			scanf ("%d", &bufferInt);// guardamos la respuesta en el buffer
 			if (bufferInt >= minimo && bufferInt <= maximo)
 			{
@@ -84,7 +35,7 @@ int utn_getNumero(int* pResultado, char* mensaje, char* mensajeError, int minimo
 	return retorno;
 }
 
-int utn_getNumeroFlotante(float* pResultado, char* mensaje, char* mensajeError, float minimo, float maximo, int reintentos)
+int utn_getNumeroFloat(float* pResultado, char* mensaje, char* mensajeError, float minimo, float maximo, int reintentos)
 {
 	int retorno = -1;
 	float bufferFloat;
@@ -111,7 +62,6 @@ int utn_getNumeroFlotante(float* pResultado, char* mensaje, char* mensajeError, 
 	return retorno;
 }
 
-
 int utn_getNumeroCaracter(char* pResultado, char* mensaje, char* mensajeError, char minimo, char maximo, int reintentos)
 {
 	int retorno = -1;
@@ -128,14 +78,114 @@ int utn_getNumeroCaracter(char* pResultado, char* mensaje, char* mensajeError, c
 				retorno = 0;
 				break;
 			}
-			else
-			{
-				printf("%s", mensajeError);
-				reintentos --;
-			}
-		}while(reintentos >= 0 );
+				else
+				{
+					printf("%s", mensajeError);
+					reintentos --;
+				}
 
+			}while(reintentos >= 0 );
+
+		}
+
+	return retorno;
+}
+
+int calculoDescuento(float *resultadoDescuento, float precio, float descuento)
+{
+	int retorno = -1;
+
+	if(resultadoDescuento != NULL && precio >0 && descuento >0){
+
+		*resultadoDescuento = precio-(precio*descuento/100);
+
+		retorno = 0;
 	}
 
 	return retorno;
 }
+
+int calculoInteres(float* resultadoInteres, float precio, float interes)
+{
+
+	int retorno = -1;
+
+	if (resultadoInteres != NULL && precio>0 && interes> 0 ){
+
+		*resultadoInteres = precio + (precio*interes/100);
+
+		retorno = 0;
+	}
+
+	return retorno;
+}
+
+int calculoBitcoin(float* resultadoBitcoin, float precio, float bitcoin)
+
+{
+	int retorno = -1;
+
+	if (resultadoBitcoin != NULL && precio>0 && bitcoin> 0 ){
+
+		*resultadoBitcoin = precio / bitcoin;
+
+		retorno = 0;
+	}
+
+	return retorno;
+}
+
+int calculoDivision(float* resultadoDivision,float operador1, float operador2){
+
+	int retorno = -1;
+	if (resultadoDivision != NULL && operador1 >0 && operador2 != 0){
+
+		*resultadoDivision = operador1 / operador2;
+
+		retorno = 0;
+	}
+	return retorno;
+}
+
+int calculoDiferencia(float* resuladoDiferencia, float operador1, float operador2){
+	int retorno = -1;
+	float bufferFloatDiff;
+	if(resuladoDiferencia != NULL && operador1 >0 && operador2 >0 ){
+
+			if (operador1 > operador2){
+
+				bufferFloatDiff = operador1 - operador2;
+			}
+			 else {
+
+				 bufferFloatDiff = operador2 - operador1;
+			 }
+		*resuladoDiferencia = bufferFloatDiff;
+
+	retorno = 0;
+	}
+	return retorno;
+}
+
+void imprimirResultado (int kms ,float precio1, float formaDePago1,float formaDePago2,float formaDePago3,float formaDePago4,float precio2, float formaDePago5, float formaDePago6, float formaDePago7, float formaDePago8,  float diffDePago)
+{
+
+	if (kms >0 && precio1>0 &&formaDePago1 > 0 && formaDePago2 > 0 && formaDePago3 > 0 && formaDePago4 > 0 &&  precio2>0 && formaDePago5 > 0 && formaDePago6 > 0 && formaDePago7 > 0 && formaDePago8 > 0 && diffDePago >0){
+
+						printf("KMs Ingresados: %d KM \n\n"
+							"Precio Aerolineas: $ %2.f\n"
+							"a) Precio con tarjeta de debito: $ %2.f \n"
+							"b) Precio con tarjeta de credito: $ %2.f \n"
+							"c) Precio pagado con bitcoin: %2.f BTC \n"
+							"d) Mostrar precio unitario : $ %2.f \n\n"
+							"Precio Latam: $ %2.f \n"
+							"a) Precio con tarjeta de debito: $ %2.f \n"
+							"b) Precio con tarjeta de credito: $ %2.f \n"
+							"c) Precio pagado con bitcoin: %2.f BTC \n"
+							"d) Mostrar precio unitario : $ %2.f \n\n\n"
+							"La diferencia de precios es: $ %2.f", kms, precio1, formaDePago1, formaDePago2, formaDePago3, formaDePago4, precio2,formaDePago5, formaDePago6, formaDePago7, formaDePago8, diffDePago);
+
+	}
+
+}
+

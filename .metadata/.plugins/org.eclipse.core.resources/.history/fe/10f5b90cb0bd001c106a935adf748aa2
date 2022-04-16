@@ -1,0 +1,32 @@
+/*
+ * utn_getNumero.h
+ *
+ *  Created on: 12 abr 2022
+ *      Author: Usuario
+ */
+#ifndef UTN_GETNUMERO_H_
+#define UTN_GETNUMERO_H_
+
+int utn_getNumero(int* pResultado, char* mensaje, char* mensajeError, int minimo, int maximo, int reintentos);//menu OK
+int utn_getNumeroFloat(float* pResultado, char* mensaje, char* mensajeError, float minimo, float maximo, int reintentos);
+int utn_getNumeroCaracter(char* pResultado, char* mensaje, char* mensajeError, char minimo, char maximo, int reintentos);
+
+int calculoDescuento(float *resultadoDescuento, float precio, float descuento);
+void calculoInteres(float *resultadoDescuento, float precio, float interes);
+void calculoBitcoin(float *resultadoBitcoin, float precio, float bitcoin);
+void calculoDivision(float *resultadoDivision,float operador1, float operador2);
+void calculoDiferencia(float* resuladoDiferencia, float operador1, float operador2);
+//int utn_getNumeroFloatCostos(float* pResultadotarjetaDebito,float* pResultadotarjetaCredito,float* pResultadoBtc ,float* pResultadoKM,float* pResultadoDiferencia, float operador1, float operador2, int operador3);
+//int utn_getNumeroMostrar(char* pResultado, int kms ,float formaDePago1,float formaDePago2,float formaDePago3,float formaDePago4, float formaDePago5, float formaDePago6, float formaDePago7, float formaDePago8,  float diffDePago);
+//int utnTP1calculo (char* pResultado, float operador1, float operador2, float operador3);
+
+//void imprimirResultado (int kms ,float formaDePago1,float formaDePago2,float formaDePago3,float formaDePago4, float formaDePago5, float formaDePago6, float formaDePago7, float formaDePago8,  float diffDePago);
+
+
+#endif /* UTN_GETNUMERO_H_
+/*	if (calculoCostosLatam == 0 && calculoCostosAerolineas == 0){
+						informarResultados = utn_getNumeroMostrar(&mostrar, kmIngresados , tarjetaDebitoAerolineas, tarjetaCreditoAerolineas, btcAerolineas, precioKmAerolineas, tarjetaDebitoLatam, tarjetaCreditoLatam, btcLatam, precioKmLatam, diffPrecios);
+						if (informarResultados == 0){
+						printf ("%c",mostrar);
+						}
+					}*/
