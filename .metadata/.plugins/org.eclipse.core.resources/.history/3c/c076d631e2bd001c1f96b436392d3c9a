@@ -140,7 +140,7 @@ int calculoDivision(float* resultadoDivision,float operador1, float operador2){
 	int retorno = -1;
 	if (resultadoDivision != NULL && operador1 >0 && operador2 != 0){
 
-		*resultadoDivision = (float) operador1 / operador2;
+		*resultadoDivision = operador1 / operador2;
 
 		retorno = 0;
 	}

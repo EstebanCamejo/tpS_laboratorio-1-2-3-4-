@@ -67,7 +67,7 @@ int main (void){
 	float cargaFKMAero;
 	int valCargaFdiferencia;
 	float cargaFDiff;
-	int flagCaseUno = 0;
+
 	int flagCaseDos = 0;
 	int flagCaseTres = 0;
 
@@ -85,16 +85,11 @@ do {
 		switch (opcion){
 
 				case 1 :
-					if (flagCaseUno == 0){
-						respuesta1 = utn_getNumero(&kmIngresados,"Ingresar Kilómetros:\n",
-									"Por favor ingrese la cantidad de KMs",0,999999999,3);
-							if (respuesta1 != 0	){
-							printf("No fue posible realizar la operacion:\n");
-							}
-							else{
-								flagCaseUno = 1;
-							}
-					}
+					respuesta1 = utn_getNumero(&kmIngresados,"Ingresar Kilómetros:\n",
+								"Por favor ingrese la cantidad de KMs",0,999999999,3);
+						if (respuesta1 != 0	){
+						printf("No fue posible realizar la operacion:\n");
+						}
 					break;
 
 				case 2 :
@@ -113,7 +108,7 @@ do {
 					break;
 
 				case 3 :
-						if (flagCaseDos == 1 && flagCaseUno == 1){
+						if (flagCaseDos == 1){
 							tarjetaDebitoLatam = calculoDescuento(&resuladoDescuentoLatam,latamPrecioTotalVuelo,descuento);//LATAM
 							tarjetaDebitoAerolineas = calculoDescuento(&resultadoDescuentoAerolineas,aerolineasPrecioTotalVuelo,descuento);
 							tarjetaCreditoLatam = calculoInteres(&resuladoInteresLatam,latamPrecioTotalVuelo, interes);
@@ -128,13 +123,12 @@ do {
 								 printf("No es posible realizar la operacion:\n");
 							 }
 							 else{
-								 printf("Operacion exitosa.\n\n Por favor complete el paso 4:\n");
 									flagCaseTres = 1;
 							 }
 						}
-						else {
-							 printf("No es posible realizar la operacion:\nDebe completar los pasos de la opcion 1 y 2\n");
-						}
+					else {
+						 printf("No es posible realizar la operacion:\n Debe realizar el paso de la opcion 2\n");
+					}
 					break;
 
 				case 4 :
@@ -163,12 +157,12 @@ do {
 								&& valCargaFKmLatam == 0 && valCargaFKmAerolineas == 0 && valCargaFdiferencia == 0 )
 						{
 							printf ("KMs Ingresados: 7090 KM \n\n");
-							printf ("Precio Aerolineas: $ 162965.00 \n");
+							printf ("Precio Aerolineas: $ 1335000.66 \n");
 							printf ("a) Precio con tarjeta de debito: $ %2.f \n",cargaFdescAero);
 							printf ("b) Precio con tarjeta de credito: $ %2.f \n",cargaFintAero);
 							printf ("c) Precio pagado con bitcoin: %2.f BTC \n",cargaFbtcAero);
 							printf ("d) Mostrar precio unitario : $ %2.f \n\n",cargaFKMAero);
-							printf (" Precio Latam: $ 159339.00 \n");
+							printf (" Precio Latam: $ 1350000.76 \n");
 							printf ("a) Precio con tarjeta de debito: $ %2.f \n",cargaFdescLatam);
 							printf ("b) Precio con tarjeta de credito: $ %2.f \n",cargaFintLatam);
 							printf ("c) Precio pagado con bitcoin: %2.f BTC \n",cargaFbtcLatam);
