@@ -30,7 +30,8 @@ int main (void){
 	int btcLatam;// 3 LATAM
 	int KmLatam;// 3 LATAM
 	int tarjetaDebitoAerolineas; // 3 AREOLINEAS
-	int tarjetaCreditoAerolineas; // 3 AREOLINEAS
+	int tarjetaCreditoAerolineas;
+
 	int btcAerolineas;// 3 AREOLINEAS
 	int KmAerolineas;// 3 AREOLINEAS
 	int diferencia;
