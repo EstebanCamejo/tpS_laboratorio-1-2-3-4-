@@ -1,5 +1,6 @@
-21:27:27 **** Incremental Build of configuration Debug for project TP_[nroUno] ****
+21:49:09 **** Incremental Build of configuration Debug for project TP_[nroUno] ****
 Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn_getNumero.o" "..\\src\\utn_getNumero.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_[nroUno].o" "..\\src\\TP_[nroUno].c" 
 ..\src\TP_[nroUno].c: In function 'main':
 ..\src\TP_[nroUno].c:33:6: warning: variable 'tarjetaCreditoAerolineas' set but not used [-Wunused-but-set-variable]

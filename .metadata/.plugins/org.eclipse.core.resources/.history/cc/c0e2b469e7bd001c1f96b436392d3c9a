@@ -164,16 +164,16 @@ do {
 						{
 							printf ("KMs Ingresados: 7090 KM \n\n");
 							printf ("Precio Aerolineas: $ 162965.00 \n");
-							printf ("a) Precio con tarjeta de debito: $ %.2f \n",cargaFdescAero);
-							printf ("b) Precio con tarjeta de credito: $ %.2f \n",cargaFintAero);
-							printf ("c) Precio pagado con bitcoin: %.2f BTC \n",cargaFbtcAero);
-							printf ("d) Mostrar precio unitario : $ %.2f \n\n",cargaFKMAero);
+							printf ("a) Precio con tarjeta de debito: $ %2.f \n",cargaFdescAero);
+							printf ("b) Precio con tarjeta de credito: $ %2.f \n",cargaFintAero);
+							printf ("c) Precio pagado con bitcoin: %2.f BTC \n",cargaFbtcAero);
+							printf ("d) Mostrar precio unitario : $ %2.f \n\n",cargaFKMAero);
 							printf (" Precio Latam: $ 159339.00 \n");
-							printf ("a) Precio con tarjeta de debito: $ %.2f \n",cargaFdescLatam);
-							printf ("b) Precio con tarjeta de credito: $ %.2f \n",cargaFintLatam);
-							printf ("c) Precio pagado con bitcoin: %.2f BTC \n",cargaFbtcLatam);
-							printf ("d) Mostrar precio unitario : $ %.2f \n\n\n",cargaFKMLatam);
-							printf ("La diferencia de precios es: $ %.2f",cargaFDiff);
+							printf ("a) Precio con tarjeta de debito: $ %2.f \n",cargaFdescLatam);
+							printf ("b) Precio con tarjeta de credito: $ %2.f \n",cargaFintLatam);
+							printf ("c) Precio pagado con bitcoin: %2.f BTC \n",cargaFbtcLatam);
+							printf ("d) Mostrar precio unitario : $ %2.f \n\n\n",cargaFKMLatam);
+							printf ("La diferencia de precios es: $ %2.f",cargaFDiff);
 						}
 						else {
 							printf("No es posible realizar la operacion:\n");

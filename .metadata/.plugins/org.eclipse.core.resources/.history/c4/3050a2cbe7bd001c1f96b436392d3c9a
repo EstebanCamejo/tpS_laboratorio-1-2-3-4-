@@ -173,17 +173,17 @@ void imprimirResultado (int kms ,float precio1, float formaDePago1,float formaDe
 	if (kms >0 && precio1>0 &&formaDePago1 > 0 && formaDePago2 > 0 && formaDePago3 > 0 && formaDePago4 > 0 &&  precio2>0 && formaDePago5 > 0 && formaDePago6 > 0 && formaDePago7 > 0 && formaDePago8 > 0 && diffDePago >0){
 
 						printf("KMs Ingresados: %d KM \n\n"
-							"Precio Aerolineas: $ %.2f\n"
-							"a) Precio con tarjeta de debito: $ %.2f \n"
-							"b) Precio con tarjeta de credito: $ %.2f \n"
-							"c) Precio pagado con bitcoin: %.2f BTC \n"
-							"d) Mostrar precio unitario : $ %.2f \n\n"
-							"Precio Latam: $ %.2f \n"
-							"a) Precio con tarjeta de debito: $ %.2f \n"
-							"b) Precio con tarjeta de credito: $ %.2f \n"
-							"c) Precio pagado con bitcoin: %.2f BTC \n"
-							"d) Mostrar precio unitario : $ %.2f \n\n\n"
-							"La diferencia de precios es: $ %.2f", kms, precio1, formaDePago1, formaDePago2, formaDePago3, formaDePago4, precio2,formaDePago5, formaDePago6, formaDePago7, formaDePago8, diffDePago);
+							"Precio Aerolineas: $ %2.f\n"
+							"a) Precio con tarjeta de debito: $ %2.f \n"
+							"b) Precio con tarjeta de credito: $ %2.f \n"
+							"c) Precio pagado con bitcoin: %2.f BTC \n"
+							"d) Mostrar precio unitario : $ %2.f \n\n"
+							"Precio Latam: $ %2.f \n"
+							"a) Precio con tarjeta de debito: $ %2.f \n"
+							"b) Precio con tarjeta de credito: $ %2.f \n"
+							"c) Precio pagado con bitcoin: %2.f BTC \n"
+							"d) Mostrar precio unitario : $ %2.f \n\n\n"
+							"La diferencia de precios es: $ %2.f", kms, precio1, formaDePago1, formaDePago2, formaDePago3, formaDePago4, precio2,formaDePago5, formaDePago6, formaDePago7, formaDePago8, diffDePago);
 
 	}
 
