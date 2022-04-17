@@ -123,7 +123,7 @@ do {
 							KmLatam = calculoDivision(&precioKMlatam,latamPrecioTotalVuelo, kmIngresados);
 							KmAerolineas = calculoDivision(&precioKMaerolineas,aerolineasPrecioTotalVuelo,kmIngresados);
 							diferencia = calculoDiferencia(&diffPrecios, latamPrecioTotalVuelo, aerolineasPrecioTotalVuelo);
-							 if (tarjetaDebitoLatam != 0|| tarjetaDebitoAerolineas!= 0 || tarjetaCreditoLatam != 0 || tarjetaCreditoAerolineas!= 0
+							 if (tarjetaDebitoLatam != 0|| tarjetaDebitoAerolineas!= 0 || tarjetaCreditoLatam != 0 || tarjetaDebitoAerolineas!= 0
 									 || btcLatam != 0 || btcAerolineas!= 0 || KmLatam != 0|| KmAerolineas != 0 || diferencia!= 0 ){
 								 printf("No es posible realizar la operacion:\n");
 							 }
