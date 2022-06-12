@@ -1,9 +1,2 @@
-23:26:46 **** Incremental Build of configuration Debug for project TP_[nroDos] ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\estructura.o" "..\\src\\estructura.c" 
-gcc -o TP_[nroDos].exe "src\\TP_[nroDos].o" "src\\UTN.o" "src\\estructura.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_[nroDos].exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-23:26:53 **** Incremental Build of configuration Debug for project TP_[nroDos] ****
-Info: Internal Builder is used for build
-gcc -o TP_[nroDos].exe "src\\TP_[nroDos].o" "src\\UTN.o" "src\\estructura.o" 
+Info: Nothing to build for pruebaTp3
+Info: Nothing to build for pruebaTp3
