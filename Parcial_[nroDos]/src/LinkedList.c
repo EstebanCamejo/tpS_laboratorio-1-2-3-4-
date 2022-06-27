@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "../inc/LinkedList.h"
+#include "LinkedList.h"
 
 
 static Node* getNode(LinkedList* this, int nodeIndex);
@@ -538,7 +538,6 @@ int ll_sort(LinkedList* this, int (*pFunc)(void* ,void*), int order)// la funcio
 void ll_map(LinkedList* this, void (*fn)(void* pElement))
 {
 	//LinkedList* retorno;
-
 	if(this != NULL && fn != NULL)
 	{
 		for(int i = 0; i<ll_len(this);i++)
@@ -547,6 +546,7 @@ void ll_map(LinkedList* this, void (*fn)(void* pElement))
 		}
 	}
 //	return retorno;
+
 }
 /*
  * Filtra la lista con una condición, recibiendo como parámetro

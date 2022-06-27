@@ -1,11 +1,14 @@
+LaunchTargetManager/configs/Parcial_[nroDos].exe=org.eclipse.launchbar.core.launchTargetType.local\:Local
 LaunchTargetManager/configs/TP_[nroDos].exe=org.eclipse.launchbar.core.launchTargetType.local\:Local
 LaunchTargetManager/configs/TP_[nroUno].exe=org.eclipse.launchbar.core.launchTargetType.local\:Local
 LaunchTargetManager/configs/likedList.exe=org.eclipse.launchbar.core.launchTargetType.local\:Local
 LaunchTargetManager/configs/pruebaTp3.exe=org.eclipse.launchbar.core.launchTargetType.local\:Local
+LaunchTargetManager/configs/pruebaTp3.exe\ (1)=org.eclipse.launchbar.core.launchTargetType.local\:Local
+LaunchTargetManager/configs/pruebaTp3.exe\ (2)=org.eclipse.launchbar.core.launchTargetType.local\:Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.launchbar.core.descriptorType.default\:TP_[nroUno].exe,org.eclipse.launchbar.core.descriptorType.default\:TP_[nroDos].exe,org.eclipse.launchbar.core.descriptorType.default\:likedList.exe,org.eclipse.launchbar.core.descriptorType.default\:pruebaTp3.exe
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:TP_[nroUno].exe,org.eclipse.launchbar.core.descriptorType.default\:pruebaTp3.exe (2),org.eclipse.launchbar.core.descriptorType.default\:likedList.exe,org.eclipse.launchbar.core.descriptorType.default\:Parcial_[nroDos].exe,org.eclipse.launchbar.core.descriptorType.default\:TP_[nroDos].exe,org.eclipse.launchbar.core.descriptorType.default\:pruebaTp3.exe (1),org.eclipse.launchbar.core.descriptorType.default\:pruebaTp3.exe
 eclipse.preferences.version=1
 org.eclipse.launchbar.core.descriptorType.default\:TP_[nroDos].exe/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:TP_[nroDos].exe/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
@@ -13,4 +16,5 @@ org.eclipse.launchbar.core.descriptorType.default\:TP_[nroUno].exe/activeLaunchM
 org.eclipse.launchbar.core.descriptorType.default\:TP_[nroUno].exe/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
 org.eclipse.launchbar.core.descriptorType.default\:likedList.exe/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:likedList.exe/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:pruebaTp3.exe\ (1)/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:pruebaTp3.exe/activeLaunchMode=run

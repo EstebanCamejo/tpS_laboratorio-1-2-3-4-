@@ -35,7 +35,7 @@ struct LinkedList
 
 //Publicas
 LinkedList* ll_newLinkedList(void); // es el constructor que pide un lugar en memoria y despues lo inicializa
-int ll_len(LinkedList* this);//devuelve el valor del campo int size de la LL
+int ll_len(LinkedList* this);//devuelve el tamaño del campo int size de la LL
 Node* test_getNode(LinkedList* this, int nodeIndex);
 int test_addNode(LinkedList* this, int nodeIndex,void* pElement);
 int ll_add(LinkedList* this, void* pElement); // agranda el tamaño de la linkedList agregando un nuevo nodo y asignandole al mismo un nuevo elemento

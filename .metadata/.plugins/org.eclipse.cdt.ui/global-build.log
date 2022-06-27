@@ -1,2 +1,7 @@
-Info: Nothing to build for pruebaTp3
-Info: Nothing to build for pruebaTp3
+22:46:36 **** Incremental Build of configuration Debug for project TP_[nroTres] ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Controller.o "..\\Controller.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o Passenger.o "..\\Passenger.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o parser.o "..\\parser.c" 
+gcc "-LD:\\eclipse-workspaceTPs\\TP_[nroTres]\\tp3_windows" -o TP_[nroTres].exe Controller.o Passenger.o UTN.o estructura.o main.o parser.o -lLinkedList 

@@ -88,7 +88,7 @@ int addPassengers (ePassenger* array,int tamanio, int indice, int* id)
 			utn_getNumero(&bufferPassenger.typePassenger, "\nIngrese el tipo de pax: \n 1. Adulto. "
 					"(entre 18 y 65 años). \n 2. Menor de edad (hasta 17 años). \n 3. Tercer edad. "
 					"(mayor de 65 años).\n 4. Embarazada. \n 5. Pasajero con discapacidad. \n\n","\nError. \n",1,5,3) == 0 &&
-			getAlfanumerico(bufferPassenger.flycode,"\nIngrese el codigo aereo.\n","\nError. \n", LENCODE,3) == 0 &&
+			getAlfanumerico(bufferPassenger.flycode,"\nIngrese el codigo aereo de 10 DIGITOS.\n","\nError. \n", LENCODE,3) == 0 &&
 			utn_getNumero(&bufferPassenger.statusFly,"\nIngrese el estado del vuelo.\n \n 1. Activo. \n 2. Demorado.\n 3. Cancelado.","\nError. \n",1, 3,3) == 0)
 
 		{
@@ -134,10 +134,11 @@ int printPassenger(ePassenger array[], int tamanio)
 	int retorno = -1;
 	if (array != NULL && tamanio >0)
 	{
-
+		printf("\n--------------------------------------------------------------------------------------------------------------------------------------\n");
 		printf("\n 				  **LISTADO EMPLEADOS** \n");
-		printf("--------------------------------------------------------------------------------------------------------------------------------------------\n");
-		printf("ID	 	NOMBRE		 APELLIDO		 PRECIO		 CODIGO		TIPO PASAJERO 		ESTADO");
+		printf("\n--------------------------------------------------------------------------------------------------------------------------------------\n");
+		printf("ID	 	NOMBRE		 	APELLIDO		 PRECIO		 CODIGO		TIPO PASAJERO 		ESTADO");
+		printf("\n--------------------------------------------------------------------------------------------------------------------------------------\n");
 		for (int i = 0;i<tamanio;i++)
 		{
 			if(array[i].isEmpty == 0)
@@ -147,7 +148,7 @@ int printPassenger(ePassenger array[], int tamanio)
 			}
 		}
 
-		printf("--------------------------------------------------------------------------------------------------------------------------------------------\n");
+		printf("\n--------------------------------------------------------------------------------------------------------------------------------------\n");
 		retorno = 0;
 	}
 	return retorno;
@@ -161,26 +162,30 @@ void passengerPrint(ePassenger passenger) // imprimir empleado 73
 	eStatusFly status [3] = {{1,"activo"},{2,"demorado"},{3,"cancelado"}};
 	int i ;
 	int j ;
+//	char StatusPrint;
 
 		for ( i = 0; i<5; i++){
 
-			if (passenger.typePassenger == type [i].typePassenger){
+			if (passenger.typePassenger == type [i].typePassenger)
+			{
+				for ( j = 0; j < 3; j++)
+				{
+					if (passenger.statusFly == status [j].statusFly)
+					{
 
-				break;
+						printf("\n%d	 	%-10s	 	%-10s	 	%.2f	         %-10s	 %-10s	 	%-s\n",
+						passenger.id, passenger.name, passenger.lastname, passenger.price,
+						passenger.flycode,type[i].typedescription,status [j].statusDescription);
+
+						break;
+					}
+				}
 			}
 		}
 
-		for ( j = 0; j < 3; j++){
 
-			if (passenger.statusFly == status [j].statusFly){
 
-				break;
-			}
-		}
 
-		printf("\n%d	 	%s		 %s     		  %.2f	  	 %s    	 %s  		 %s \n",
-			passenger.id, passenger.name, passenger.lastname, passenger.price, passenger.flycode,
-			type[i].typedescription,status [j].statusFly);
 
 }
 
@@ -209,8 +214,8 @@ void passenger_modificarMenu(ePassenger* bufferPassenger,int tamanio)
 
 
 				do{
-						if (utn_getNumero(&opcion,"Por favor ingrese el numero de la opcion que "
-														"desea modificar: \n"
+						if (utn_getNumero(&opcion,"\n\nPor favor, ingrese el numero de la opcion que "
+														"desea modificar: \n\n\n"
 														"1) Nombre. \n"
 														"2) Apellido.\n"
 														"3) Precio del vuelo.\n"
@@ -339,7 +344,8 @@ int sortPassengers (ePassenger* array, int tamanio)
 	if (array != NULL && tamanio >0){
 
 
-		if (utn_getNumero (&order, "Por favor ingrese que tipo de ordenamiento desea. \n .Ingrese: \n 1 Descendente \n 0 Ascendente .","\nERROR\n",0,1,3) == 0)
+		if (utn_getNumero (&order, "\nPor favor ingrese que tipo de ordenamiento (POR APELLIDO) que desea visualizar. "
+				"\n .Ingrese: \n 1 Descendente \n 0 Ascendente .","\nERROR\n",0,1,3) == 0)
 		{
 			do {
 				  flagSwap = 0;

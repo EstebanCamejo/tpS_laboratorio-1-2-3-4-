@@ -325,9 +325,13 @@ static	int esNombre (char array [], int tamanio)
  			 printf("\n %s",mensaje);
  			 fflush(stdin);
  		 	 gets(bufferChar);
- 		 	 	 	 	 	 	 	 	 	 	 	 	 // printf("%d",strlen(bufferChar));
+
+ 		 	 if(strlen(bufferChar)>tamano || strlen(bufferChar)<tamano)
+ 		 	 {
+ 		 		printf("\n %s",errorMensaje);
+ 		 	 } 	 	 	 	 	 	 	 	 	 	 	 	 // printf("%d",strlen(bufferChar));
  //valido que lo ingresado no exceda
- 			 if(strlen(bufferChar)<=tamano)
+ 			 if(strlen(bufferChar)==tamano)
  			 {
  //recorro arrray
  				 for(int i=0;i<strlen(bufferChar);i++) //while(i<=strlen(bufferChar))

@@ -36,16 +36,16 @@ struct LinkedList
 
 
 //Publicas
-LinkedList* ll_newLinkedList(void); // USAR
-int ll_len(LinkedList* this);// USAR
-Node* test_getNode(LinkedList* this, int nodeIndex);//NO
-int test_addNode(LinkedList* this, int nodeIndex,void* pElement);// NO
-int ll_add(LinkedList* this, void* pElement); // USAR
-void* ll_get(LinkedList* this, int index); // USAR
-int ll_set(LinkedList* this, int index,void* pElement);// NO
-int ll_remove(LinkedList* this,int index); // USAR
+LinkedList* ll_newLinkedList(void);
+int ll_len(LinkedList* this);
+Node* test_getNode(LinkedList* this, int nodeIndex);
+int test_addNode(LinkedList* this, int nodeIndex,void* pElement);
+int ll_add(LinkedList* this, void* pElement);
+void* ll_get(LinkedList* this, int index);
+int ll_set(LinkedList* this, int index,void* pElement);
+int ll_remove(LinkedList* this,int index);
 int ll_clear(LinkedList* this);
-int ll_deleteLinkedList(LinkedList* this); // USAR
+int ll_deleteLinkedList(LinkedList* this);
 int ll_indexOf(LinkedList* this, void* pElement);
 int ll_isEmpty(LinkedList* this);
 int ll_push(LinkedList* this, int index, void* pElement);
