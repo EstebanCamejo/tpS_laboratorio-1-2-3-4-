@@ -598,7 +598,7 @@ int controller_SiguienteId(LinkedList* pArrayListPassenger) // v2
 int controller_getMaximoId (FILE* pFile)
 {
 	Passenger* pAuxPassenger = NULL;
-	int maxmoId = 1;
+	int maxmoId = 0;
 	int cant = 0;
 	char buffer1[50], buffer2[50], buffer3[50], buffer4[50], buffer5[8], buffer6[50], buffer7[50];
 //	pFile = fopen("data.csv","r");
